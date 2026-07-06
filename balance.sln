@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "balance", "balance.csproj", "{63A06B46-F991-4017-8AB9-FBF4395C496D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63A06B46-F991-4017-8AB9-FBF4395C496D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63A06B46-F991-4017-8AB9-FBF4395C496D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63A06B46-F991-4017-8AB9-FBF4395C496D}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{63A06B46-F991-4017-8AB9-FBF4395C496D}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{63A06B46-F991-4017-8AB9-FBF4395C496D}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{63A06B46-F991-4017-8AB9-FBF4395C496D}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+﻿{
+  "id": "balance",
+  "name": "balance",
+  "author": "Aetheryne",
+  "description": "Slay the Spire 2 balance mod ",
+  "version": "v0.0.1",
+  "min_game_version": "0.107.0",
+  "has_pck": true,
+  "has_dll": true,
+  "dependencies": [
+    {"id": "BaseLib", "min_version": "3.3.2"}
+  ],
+  "affects_gameplay": true
+}
