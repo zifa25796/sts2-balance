@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace balance.balanceCode.Monster;
+namespace balance.balanceCode.Act1Monster;
 
 public class CubexConstructBalance
 {

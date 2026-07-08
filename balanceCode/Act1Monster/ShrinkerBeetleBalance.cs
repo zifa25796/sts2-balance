@@ -3,11 +3,11 @@ using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
 
-namespace balance.balanceCode.Monster;
+namespace balance.balanceCode.Act1Monster;
 
 public class ShrinkerBeetleBalance
 {
-    [HarmonyPatch(typeof(ShrinkerBeetle), nameof(Nibbit.MinInitialHp), MethodType.Getter)]
+    [HarmonyPatch(typeof(ShrinkerBeetle), nameof(ShrinkerBeetle.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
         static bool Prefix(ref int __result)
@@ -17,7 +17,7 @@ public class ShrinkerBeetleBalance
         }
     }
 
-    [HarmonyPatch(typeof(ShrinkerBeetle), nameof(Nibbit.MaxInitialHp), MethodType.Getter)]
+    [HarmonyPatch(typeof(ShrinkerBeetle), nameof(ShrinkerBeetle.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {
         static bool Prefix(ref int __result)

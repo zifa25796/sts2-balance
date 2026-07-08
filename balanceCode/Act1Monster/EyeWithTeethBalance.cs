@@ -4,7 +4,7 @@ using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
 
-namespace balance.balanceCode.Monster;
+namespace balance.balanceCode.Act1Monster;
 
 public class EyeWithTeethBalance
 {
