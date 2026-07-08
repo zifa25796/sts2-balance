@@ -1,0 +1,5 @@
+﻿{
+  "PERSONAL_HIVE_POWER.description": "Whenever this enemy is hit by an Attack, add [gold]Dazed[/gold] into your [gold]Discard Pile[/gold].",
+  "PERSONAL_HIVE_POWER.smartDescription": "Whenever this enemy is hit by an Attack, add [blue]{Amount}[/blue] [gold]Dazed[/gold] into your [gold]Discard Pile[/gold].",
+  "PERSONAL_HIVE_POWER.title": "Personal Hive"
+}

@@ -109,6 +109,25 @@ A Slay the Spire 2 balance modification mod that adjusts enemy stats for a more 
 |-------|--------|
 | **Personal Hive** | Dazed cards go to Discard pile instead of Draw pile |
 
+### Relic Adjustments
+
+| Relic | Change |
+|-------|--------|
+| **Red Skull** | Reworked: grants +30% damage when HP ≤ 50% (custom power) |
+| **Sword of Jade** | Reworked: gain 1 Str + 1 Dex per combat, Dexterity also adds to attack damage |
+| **Bag of Preparation** | Turn 1: full bonus, Turn 2: +1 card only, beyond: no bonus |
+| **Meat on the Bone** | Heals 3 if HP between threshold and 70% |
+| **Bowler Hat** | Now also grants 16 gold on pickup |
+| **Amethyst Aubergine** | Now grants gold on pickup |
+| **Book of Five Rings** | Heal reduced 20 → 5, also grants Max HP on trigger |
+| **Centennial Puzzle** | After trigger, gain 3 Block Next Turn |
+| **Galactic Dust** | 7 stars → 7 block |
+| **Intimidating Helmet** | Grants 2× energy as block for cards costing 2+ energy |
+| **Old Coin** | Gold reduced to 333 |
+| **Permafrost** | Gain 10 block at start of combat |
+| **War Paint** | Upgrades 2 skills (prefers non-Basic for 2nd) |
+| **Whetstone** | Upgrades 2 attacks (prefers non-Basic for 2nd) |
+
 > Values in parentheses are Ascension levels (Deadly Enemies / Tough Enemies).
 
 ## Requirements

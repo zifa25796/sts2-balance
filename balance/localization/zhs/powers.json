@@ -1,0 +1,5 @@
+﻿{
+  "PERSONAL_HIVE_POWER.description": "每当这个敌人被攻击命中时，在你的[gold]弃牌堆[/gold]中加入[gold]晕眩[/gold]。",
+  "PERSONAL_HIVE_POWER.smartDescription": "每当这个敌人被攻击命中时，在你的[gold]弃牌堆[/gold]中加入[blue]{Amount}[/blue]张[gold]晕眩[/gold]。",
+  "PERSONAL_HIVE_POWER.title": "人体蜂房"
+}

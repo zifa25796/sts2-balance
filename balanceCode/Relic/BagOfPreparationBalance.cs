@@ -1,0 +1,40 @@
+﻿using HarmonyLib;
+using MegaCrit.Sts2.Core.Entities.Players;
+using MegaCrit.Sts2.Core.Entities.Relics;
+using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using System;
+using System.Collections.Generic;
+using MegaCrit.Sts2.Core.Models.Relics;
+
+
+namespace balance.balanceCode.Relic;
+
+[HarmonyPatch(typeof(BagOfPreparation), nameof(BagOfPreparation.ModifyHandDraw))]
+class BagOfPreparationBalance
+{
+    static bool Prefix(BagOfPreparation __instance, Player player, decimal count, ref decimal __result)
+    {
+        if (player != __instance.Owner)
+        {
+            __result = count;
+            return false;
+        }
+
+        int turn = __instance.Owner.PlayerCombatState.TurnNumber;
+
+        if (turn == 1)
+        {
+            __result = count + __instance.DynamicVars.Cards.BaseValue;
+        }
+        else if (turn == 2)
+        {
+            __result = count + 1;
+        }
+        else
+        {
+            __result = count;
+        }
+
+        return false;
+    }
+}
