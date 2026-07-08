@@ -49,6 +49,66 @@ A Slay the Spire 2 balance modification mod that adjusts enemy stats for a more 
 | **Waterfall Giant** | Stomp: 10(11) → 9(10), Ram: 15(16) → 14(15), Pressure Up: 12(13) → 11(12), Pressure Gun base: 18(20) → 15(18) |
 | **Wriggler** | HP: 16-19 (17-20) → lower, Bite: 6(7) → 5(6) |
 
+### Monster Adjustments — Act 2
+
+| Monster | Change |
+|---------|--------|
+| **Chomper** | HP: 62-65 → 58-65 |
+| **Crusher** | Thrash: 16(18) → 14(16), Bug Sting: 6(7) → 5(6), Guarded Strike: 12(14) → 10(12) |
+| **Decimillipede Segment** | HP: 44-48 (48-52) → 38-44 (42-48), Constrict: 7(8) → 6(7), Bulk: 6(7) → 5(6) |
+| **Entomancer** | HP: 152 (152) → 142 (152), Spear: 18(20) → 16(18) |
+| **Exoskeleton** | HP: 26-27 → 24-27 |
+| **Hunter Killer** | HP: 115-116 → 111, Bite: 16(18) → 14(16), Puncture: 7(8) → 6(7) |
+| **Infested Prism** | Pulsate: 7(8) → 6(7) |
+| **Knowledge Demon** | HP: 389 → 369 (389), Slap: 16(18) → 15(16), Knowledge Overwhelming: 8(9) → 7(8), Ponder: 6(7) → 5(6), Ponder Strength: 4(5) → 3(4) |
+| **Myte** | Bite: 14(16) → 12(14) |
+| **Ovicopter** | Smash: 16(18) → 15(16), Tenderizer: 7(8) → 6(7) |
+| **Parafright** | HP: 15 → 15, Slam: 15(16) → 14(15) |
+| **Rocket** | Precision Beam: 17(19) → 15(17), Laser: 34(36) → 32(34) |
+| **Slumbering Beetle** | Plating: 16(18) → 13(16) |
+| **Spiny Toad** | Lash: 17(19) → 15(17) |
+| **The Insatiable** | Bite: 29(32) → 26(29) |
+| **Thieving Hopper** | Theft: 16(18) → 14(16), Nab: 14(16) → 12(14), Hat Trick: 22(24) → 20(22) |
+| **Tunneler** | Bite: 13(15) → 11(13), Below: 27(30) → 24(27) |
+| **Bowlbug Nectar** | HP: 36-37 (37-38) → 33-36 (34-37) |
+| **Bowlbug Rock** | Headbutt: 15(17) → 14(15) |
+| **Bowlbug Silk** | HP: 40-41 (41-42) → 38-40 (39-41) |
+| **Tough Egg** | HP: 17-18 (18-19) → 15-17 (16-18), Hatchling HP: 17-18 (18-19) → 15-17 (16-18) |
+
+### Monster Adjustments — Act 3
+
+| Monster | Change |
+|---------|--------|
+| **Aeonglass** | Ebb damage/block: 30(35) → 25(30) |
+| **Axebot** | Hammer Uppercut: 11(13) → 9(11) |
+| **Fabricator** | Fabricating Strike: 16(18) → 13(16) |
+| **Flail Knight** | HP: 9 → 8 |
+| **Frog Knight** | Tongue Lash: 10(11) → 9(10), Strike Down Evil: 22(24) → 20(22) |
+| **Globe Head** | Shocking Slap: 11(12) → 10(11), Galvanic Burst: 15(17) → 14(15), Thunder Strike: 8(9) → 7(8) |
+| **Guardbot** | HP: 19-20 (20-21) → 15-19 (16-20) |
+| **Living Shield** | HP: 70 → 60 |
+| **Magi Knight** | Power Shield damage: 6(7) → 5(6), Power Shield block: 7(8) → 6(7) |
+| **Mecha Knight** | Charge: 25(30) → 20(25) |
+| **Noisebot** | HP: 22-23 (23-24) → 17-22 (18-23) |
+| **Owl Magistrate** | HP: 240 → 225 |
+| **Scroll of Biting** | Chomp: 15(17) → 13(15) |
+| **Slimed Berserker** | HP: 273 → 255 |
+| **Soul Nexus** | HP: 248 → 228, Drain Life: 15(17) → 14(15) |
+| **Spectral Knight** | HP: 93 → 89 |
+| **Stabbot** | HP: 22-23 (23-24) → 17-22 (18-23) |
+| **Test Subject** | Form 1 HP: 105 → 100, Form 2: 210 → 200, Form 3: 315 → 300, Skull Bash: 12(14) → 10(12), Multi Claw: 10(11) → 9(10) |
+| **The Forgotten** | HP: 105 → 99, Dread: 12(14) → 10+dex(12+dex), Miasma steals dexterity |
+| **The Lost** | HP: 105 → 99 |
+| **Torch Head Amalgam** | Weak Tackle: 12(13) → 11(12) |
+| **Turret Operator** | HP: 45 → 35 |
+| **Zapbot** | HP: 22-23 (23-24) → 17-22 (18-23) |
+
+### Power Adjustments
+
+| Power | Change |
+|-------|--------|
+| **Personal Hive** | Dazed cards go to Discard pile instead of Draw pile |
+
 > Values in parentheses are Ascension levels (Deadly Enemies / Tough Enemies).
 
 ## Requirements
