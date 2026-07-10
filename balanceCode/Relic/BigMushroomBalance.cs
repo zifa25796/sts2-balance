@@ -11,7 +11,7 @@ public class BigMushroomBalance
     [HarmonyPatch(typeof(BigMushroom), nameof(BigMushroom.AfterObtained))]
     public static class BigMushroomPatch
     {
-        static async Task Postfix(BigMushroom __instance)
+        static async void Postfix(BigMushroom __instance)
         {
             await CreatureCmd.Heal(
                 __instance.Owner.Creature,
