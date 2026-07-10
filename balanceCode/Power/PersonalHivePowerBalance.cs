@@ -25,22 +25,15 @@ public static class PersonalHivePowerBalance
         DamageResult _,
         ValueProp props,
         Creature? dealer,
-        CardModel? cardSource)
+        CardModel? cardSource,
+        ref Task __result)
     {
-        // 启动自己的 async 逻辑
-        RewriteAfterDamageReceived(
-            __instance,
-            target,
-            props,
-            dealer
-        );
-
-        // 阻止原版执行
+        __result = RewriteAfterDamageReceived(__instance, target, props, dealer);
         return false;
     }
 
 
-    private static async void RewriteAfterDamageReceived(
+    private static async Task RewriteAfterDamageReceived(
         PersonalHivePower power,
         Creature target,
         ValueProp props,
