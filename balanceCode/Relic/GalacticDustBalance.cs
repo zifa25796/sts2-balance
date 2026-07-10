@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
@@ -11,6 +11,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace balance.balanceCode.Relic;
 
+// Balance: 7 stars → 7 block
 [HarmonyPatch(typeof(GalacticDust), "get_CanonicalVars")]
 public class GalacticDustBalance
 {

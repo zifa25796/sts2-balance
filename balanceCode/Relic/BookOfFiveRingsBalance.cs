@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
@@ -13,6 +13,7 @@ namespace balance.balanceCode.Relic;
 
 public class BookOfFiveRingsBalance
 {
+    // Balance: Heal reduced 20 → 5, also grants Max HP on trigger
     [HarmonyPatch(typeof(BookOfFiveRings), "CanonicalVars", MethodType.Getter)]
     public static class BookOfFiveRings_HealNerf_Patch
     {
@@ -25,7 +26,7 @@ public class BookOfFiveRingsBalance
             };
         }
     }
-    
+
     [HarmonyPatch(typeof(BookOfFiveRings), nameof(BookOfFiveRings.AfterCardChangedPiles))]
     public static class BookOfFiveRings_MaxHpBoost_Patch
     {
@@ -45,7 +46,7 @@ public class BookOfFiveRingsBalance
             bool actuallyTriggered = after != before && after % threshold == 0;
             if (actuallyTriggered)
             {
-                CreatureCmd.GainMaxHp(__instance.Owner.Creature, __instance.DynamicVars.Heal.BaseValue);
+                await CreatureCmd.GainMaxHp(__instance.Owner.Creature, __instance.DynamicVars.Heal.BaseValue);
             }
         }
     }

@@ -17,6 +17,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class SlitheringStranglerBalance
 {
+    // Balance: ThwackDamage 6(7) → 5(6)
     [HarmonyPatch(typeof(SlitheringStrangler), "ThwackDamage", MethodType.Getter)]
     public class ThwackDamage
     {
@@ -27,6 +28,7 @@ public class SlitheringStranglerBalance
         }
     }
     
+    // Balance: LashDamage 11(12) → 10(11)
     [HarmonyPatch(typeof(SlitheringStrangler), "LashDamage", MethodType.Getter)]
     public class LashDamage
     {
@@ -37,15 +39,17 @@ public class SlitheringStranglerBalance
         }
     }
 
+    private static readonly PropertyInfo ThwackDamageProperty =
+        typeof(SlitheringStrangler).GetProperty("ThwackDamage", BindingFlags.NonPublic | BindingFlags.Instance);
+
     static int GetThrawkDamage(SlitheringStrangler monster)
     {
-        return (int)typeof(SlitheringStrangler)
-            .GetProperty("ThwackDamage", BindingFlags.NonPublic | BindingFlags.Instance)
-            .GetValue(monster);
+        return (int)ThwackDamageProperty.GetValue(monster);
     }
     
+    // Balance: ThwackMove now grants 4 block
     [HarmonyPatch]
-    public class MyClass
+    public class ThwackMovePatch
     {
         static MethodBase TargetMethod()
         {

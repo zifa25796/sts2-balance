@@ -1,12 +1,12 @@
-﻿using HarmonyLib;
-using System.Reflection;
+using HarmonyLib;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Relics;
 
 namespace balance.balanceCode.Relic;
 
-[HarmonyPatch(typeof(GalacticDust), "get_CanonicalVars")]
+// Balance: Fragrant Mushroom loses 12 HP
+[HarmonyPatch(typeof(FragrantMushroom), "get_CanonicalVars")]
 public class FragrantMushroomBalance
 {
     static IEnumerable<DynamicVar> Postfix(IEnumerable<DynamicVar> __result)

@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
@@ -14,13 +14,15 @@ namespace balance.balanceCode.Act1Monster;
 
 public class SludgeSpinnerBalance
 {
+    private static readonly PropertyInfo RageDamageProperty =
+        typeof(SludgeSpinner).GetProperty("RageDamage", BindingFlags.NonPublic | BindingFlags.Instance);
+
     static int GetRageDamage(SludgeSpinner monster)
     {
-        return (int)typeof(SludgeSpinner)
-            .GetProperty("RageDamage", BindingFlags.NonPublic | BindingFlags.Instance)
-            .GetValue(monster);
+        return (int)RageDamageProperty.GetValue(monster);
     }
-    
+
+    // Balance: Rage grants 2 Strength (was 3)
     [HarmonyPatch]
     public class RageMove
     {

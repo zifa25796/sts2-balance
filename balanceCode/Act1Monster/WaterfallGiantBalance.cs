@@ -14,6 +14,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class WaterfallGiantBalance
 {
+    // Balance: StompDamage 10(11) → 9(10)
     [HarmonyPatch(typeof(WaterfallGiant), "StompDamage", MethodType.Getter)]
     public class StompDamage
     {
@@ -24,6 +25,7 @@ public class WaterfallGiantBalance
         }
     }
     
+    // Balance: RamDamage 15(16) → 14(15)
     [HarmonyPatch(typeof(WaterfallGiant), "RamDamage", MethodType.Getter)]
     public class RamDamage
     {
@@ -34,6 +36,7 @@ public class WaterfallGiantBalance
         }
     }
     
+    // Balance: PressureUpDamage 12(13) → 11(12)
     [HarmonyPatch(typeof(WaterfallGiant), "PressureUpDamage", MethodType.Getter)]
     public class PressureUpDamage
     {
@@ -44,6 +47,7 @@ public class WaterfallGiantBalance
         }
     }
     
+    // Balance: BasePressureGunDamage 18(20) → 15(18)
     [HarmonyPatch(typeof(WaterfallGiant), "BasePressureGunDamage", MethodType.Getter)]
     public class BasePressureGunDamage
     {
@@ -54,6 +58,7 @@ public class WaterfallGiantBalance
         }
     }
     
+    // Balance: PressureGunIncrease set to 7
     [HarmonyPatch(typeof(WaterfallGiant), "PressureGunIncrease", MethodType.Getter)]
     public class PressureGunIncrease
     {
@@ -64,53 +69,52 @@ public class WaterfallGiantBalance
         }
     }
 
+    private static readonly MethodInfo IncrementBuildUpAnimationTrackMethod =
+        typeof(WaterfallGiant).GetMethod("IncrementBuildUpAnimationTrack", BindingFlags.NonPublic | BindingFlags.Instance);
+    private static readonly PropertyInfo PressureUpDamageProperty =
+        typeof(WaterfallGiant).GetProperty("PressureUpDamage", BindingFlags.NonPublic | BindingFlags.Instance);
+    private static readonly PropertyInfo StompDamageProperty =
+        typeof(WaterfallGiant).GetProperty("StompDamage", BindingFlags.NonPublic | BindingFlags.Instance);
+    private static readonly PropertyInfo RamDamageProperty =
+        typeof(WaterfallGiant).GetProperty("RamDamage", BindingFlags.NonPublic | BindingFlags.Instance);
+    private static readonly PropertyInfo CurrentPressureGunDamageProperty =
+        typeof(WaterfallGiant).GetProperty("CurrentPressureGunDamage", BindingFlags.NonPublic | BindingFlags.Instance);
+    private static readonly PropertyInfo PressureGunIncreaseProperty =
+        typeof(WaterfallGiant).GetProperty("PressureGunIncrease", BindingFlags.NonPublic | BindingFlags.Instance);
+
     static void IncrementBuildUpAnimationTrack(WaterfallGiant monster)
     {
-        typeof(WaterfallGiant)
-            .GetMethod("IncrementBuildUpAnimationTrack", BindingFlags.NonPublic | BindingFlags.Instance)
-            .Invoke(monster, null);
+        IncrementBuildUpAnimationTrackMethod.Invoke(monster, null);
     }
-    
+
     static int GetPressureUpDamage(WaterfallGiant monster)
     {
-        return (int)typeof(WaterfallGiant)
-            .GetProperty("PressureUpDamage", BindingFlags.NonPublic | BindingFlags.Instance)
-            .GetValue(monster);
+        return (int)PressureUpDamageProperty.GetValue(monster);
     }
-    
+
     static int GetStompDamage(WaterfallGiant monster)
     {
-        return (int)typeof(WaterfallGiant)
-            .GetProperty("StompDamage", BindingFlags.NonPublic | BindingFlags.Instance)
-            .GetValue(monster);
+        return (int)StompDamageProperty.GetValue(monster);
     }
-    
+
     static int GetRamDamage(WaterfallGiant monster)
     {
-        return (int)typeof(WaterfallGiant)
-            .GetProperty("RamDamage", BindingFlags.NonPublic | BindingFlags.Instance)
-            .GetValue(monster);
+        return (int)RamDamageProperty.GetValue(monster);
     }
-    
+
     static int GetCurrentPressureGunDamage(WaterfallGiant monster)
     {
-        return (int)typeof(WaterfallGiant)
-            .GetProperty("CurrentPressureGunDamage", BindingFlags.NonPublic | BindingFlags.Instance)
-            .GetValue(monster);
+        return (int)CurrentPressureGunDamageProperty.GetValue(monster);
     }
 
     static void SetCurrentPressureGunDamage(WaterfallGiant monster, int value)
     {
-        typeof(WaterfallGiant)
-            .GetProperty("CurrentPressureGunDamage", BindingFlags.NonPublic | BindingFlags.Instance)
-            .SetValue(monster, value);
+        CurrentPressureGunDamageProperty.SetValue(monster, value);
     }
-    
+
     static int GetPressureGunIncrease(WaterfallGiant monster)
     {
-        return (int)typeof(WaterfallGiant)
-            .GetProperty("PressureGunIncrease", BindingFlags.NonPublic | BindingFlags.Instance)
-            .GetValue(monster);
+        return (int)PressureGunIncreaseProperty.GetValue(monster);
     }
     
     [HarmonyPatch]
@@ -227,9 +231,7 @@ public class WaterfallGiantBalance
         {
             AttackCommand attackCommand = await DamageCmd.Attack((Decimal) GetCurrentPressureGunDamage(monster)).FromMonster((MonsterModel) monster).WithAttackerAnim("Attack", 0.3f).WithAttackerFx(sfx: "event:/sfx/enemy/enemy_attacks/waterfall_giant/waterfall_giant_attack_kick").WithHitFx("vfx/vfx_attack_blunt").Execute((PlayerChoiceContext) null);
             int current = GetCurrentPressureGunDamage(monster);
-            int increase = (int)typeof(WaterfallGiant)
-                .GetProperty("PressureGunIncrease", BindingFlags.NonPublic | BindingFlags.Instance)
-                .GetValue(monster);
+            int increase = GetPressureGunIncrease(monster);
             SetCurrentPressureGunDamage(monster, current + increase);
             SteamEruptionPower steamEruptionPower = await PowerCmd.Apply<SteamEruptionPower>((PlayerChoiceContext) new ThrowingPlayerChoiceContext(), monster.Creature, 1M, monster.Creature, (CardModel) null);
             IncrementBuildUpAnimationTrack(monster);

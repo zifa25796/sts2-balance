@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -14,13 +14,15 @@ namespace balance.balanceCode.Act1Monster;
 
 public class CubexConstructBalance
 {
+    private static readonly PropertyInfo BlastDamageProperty =
+        typeof(CubexConstruct).GetProperty("BlastDamage", BindingFlags.NonPublic | BindingFlags.Instance);
+
     static int GetBlastDamage(CubexConstruct monster)
     {
-        return (int)typeof(CubexConstruct)
-            .GetProperty("BlastDamage", BindingFlags.NonPublic | BindingFlags.Instance)
-            .GetValue(monster);
+        return (int)BlastDamageProperty.GetValue(monster);
     }
-    
+
+    // Balance: RepeaterBlast strength gain 2 → 1
     [HarmonyPatch]
     public class RepeaterBlastMove
     {
