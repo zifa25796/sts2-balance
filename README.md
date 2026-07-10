@@ -128,6 +128,27 @@ A Slay the Spire 2 balance modification mod that adjusts enemy stats for a more 
 | **War Paint** | Upgrades 2 skills (prefers non-Basic for 2nd) |
 | **Whetstone** | Upgrades 2 attacks (prefers non-Basic for 2nd) |
 
+### Event Adjustments
+
+| Event | Change |
+|-------|--------|
+| **Battleworn Dummy** | HP set to 250 |
+| **Luminous Choir** | Gold reward: 129 |
+| **Room Full of Cheese** | Damage scales: 8 (Act 1+) / 14 (otherwise) |
+| **Slippery Bridge** | HP loss starts at 2, first card removal no longer excludes Basic cards |
+| **The Lantern Key** | Mysterious Knight minions: 6 → 4 |
+| **Trial — Merchant Innocent** | 1 Shame curse, upgrade 3 cards |
+| **Zen Weaver** | Breathing: 50g, Emotional: 125g, Arachnid: 230g |
+
+### System Changes
+
+| Change | Description |
+|--------|-------------|
+| **Quest Cards** | Auto-exhaust on draw and replace from deck |
+| **Big Mushroom** | Heals 20% max HP on pickup |
+| **Fragrant Mushroom** | HP loss: 12 |
+| **Flail Knight** | Changed from HP nerf to damage nerf (FlailDamage: 9(8)) |
+
 > Values in parentheses are Ascension levels (Deadly Enemies / Tough Enemies).
 
 ## Requirements

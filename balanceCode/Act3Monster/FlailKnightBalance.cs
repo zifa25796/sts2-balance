@@ -7,22 +7,12 @@ namespace balance.balanceCode.Act3Monster;
 
 public class FlailKnightBalance
 {
-    [HarmonyPatch(typeof(FlailKnight), nameof(FlailKnight.MinInitialHp), MethodType.Getter)]
-    public class MinHp
+    [HarmonyPatch(typeof(FlailKnight), "FlailDamage", MethodType.Getter)]
+    public class FlailDamage
     {
         static bool Prefix(ref int __result)
         {
-            __result = AscensionHelper.HasAscension(AscensionLevel.ToughEnemies) ? 9 : 8;
-            return false;
-        }
-    }
-
-    [HarmonyPatch(typeof(FlailKnight), nameof(FlailKnight.MaxInitialHp), MethodType.Getter)]
-    public class MaxHp
-    {
-        static bool Prefix(ref int __result)
-        {
-            __result = AscensionHelper.HasAscension(AscensionLevel.ToughEnemies) ? 9 : 8;
+            __result = AscensionHelper.HasAscension(AscensionLevel.DeadlyEnemies) ? 9 : 8;
             return false;
         }
     }

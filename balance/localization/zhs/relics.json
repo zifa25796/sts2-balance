@@ -22,5 +22,13 @@
   "MEAT_ON_THE_BONE.title": "带骨肉",
   "SWORD_OF_JADE.description": "在每场战斗开始时，获得[blue]1[/blue]点[gold]力量[/gold]以及[blue]1[/blue]点[gold]敏捷[/gold]。\n你的[gold]敏捷[/gold]也会增加你的攻击伤害",
   "SWORD_OF_JADE.flavor": "[red]这个遗物的细节将在未来揭晓……[/red]",
-  "SWORD_OF_JADE.title": "玉之剑"
+  "SWORD_OF_JADE.title": "玉之剑",
+  "BIG_MUSHROOM.description": "拾起时，将你的最大生命值提升[blue]{MaxHp}[/blue]，并提升最大生命的[blue]10%[/blue]。在每场战斗开始时，少抽[blue]{Cards}[/blue]张牌。",
+  "BIG_MUSHROOM.eventDescription": "在每场战斗开始时，[red]少抽[/red][blue]2[/blue]张牌。最大生命值提升[green]{MaxHp}[/green]，并提升最大生命的[blue]10%[/blue]。",
+  "BIG_MUSHROOM.flavor": "[red]这个遗物的细节将在未来揭晓……[/red]",
+  "BIG_MUSHROOM.title": "大蘑菇",
+  "FRAGRANT_MUSHROOM.description": "拾起时，失去[blue]12[/blue]点生命，然后随机[gold]升级[/gold][blue]{Cards}[/blue]张牌。",
+  "FRAGRANT_MUSHROOM.eventDescription": "失去[red]12[/red]点生命，然后随机[gold]升级[/gold][blue]{Cards}[/blue]张牌。",
+  "FRAGRANT_MUSHROOM.flavor": "[red]这个遗物的细节将在未来揭晓……[/red]",
+  "FRAGRANT_MUSHROOM.title": "芳香蘑菇"
 }
