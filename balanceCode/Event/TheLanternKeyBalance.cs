@@ -1,5 +1,3 @@
-﻿
-
 using System.Reflection;
 using System.Reflection.Emit;
 using HarmonyLib;
@@ -10,7 +8,8 @@ namespace balance.balanceCode.Event;
 [HarmonyPatch]
 public class TheLanternKeyBalance
 {
-    [HarmonyPatch]   // ← 加上这一行
+    // Balance: Mysterious Knight minions 6 → 4
+    [HarmonyPatch]
     public static class MysteriousKnightNerf
     {
         static IEnumerable<MethodBase> TargetMethods()

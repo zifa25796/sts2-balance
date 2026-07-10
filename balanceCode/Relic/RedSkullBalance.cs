@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
@@ -15,6 +15,7 @@ namespace balance.balanceCode.Relic;
 
 public class RedSkullBalance
 {
+    // Balance: Reworked: grants +30% damage when HP ≤ 50% (via RedSkullPower)
     [HarmonyPatch(typeof(RedSkull), "ModifyStrengthIfNecessary")]
     public static class RedSkullPatch
     {

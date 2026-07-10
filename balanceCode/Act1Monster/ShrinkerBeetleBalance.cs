@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class ShrinkerBeetleBalance
 {
+    // Balance: MinHp 38-40(40-42) → 34-36(36-38)
     [HarmonyPatch(typeof(ShrinkerBeetle), nameof(ShrinkerBeetle.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -17,6 +18,7 @@ public class ShrinkerBeetleBalance
         }
     }
 
+    // Balance: MaxHp 38-40(40-42) → 34-36(36-38)
     [HarmonyPatch(typeof(ShrinkerBeetle), nameof(ShrinkerBeetle.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {

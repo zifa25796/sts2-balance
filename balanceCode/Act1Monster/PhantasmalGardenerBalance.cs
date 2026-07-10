@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -8,6 +8,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class PhantasmalGardenerBalance
 {
+    // Balance: MinHp 28(30) → 26(28-29)
     [HarmonyPatch(typeof(PhantasmalGardener), nameof(PhantasmalGardener.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -18,6 +19,7 @@ public class PhantasmalGardenerBalance
         }
     }
 
+    // Balance: MaxHp 28(30) → 26(28-29)
     [HarmonyPatch(typeof(PhantasmalGardener), nameof(PhantasmalGardener.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {
@@ -27,7 +29,7 @@ public class PhantasmalGardenerBalance
             return false;
         }
     }
-    
+
     [HarmonyPatch(typeof(PhantasmalGardener), "BiteDamage", MethodType.Getter)]
     public class BiteDamage
     {
@@ -37,7 +39,7 @@ public class PhantasmalGardenerBalance
             return false;
         }
     }
-    
+
     [HarmonyPatch(typeof(PhantasmalGardener), "LashDamage", MethodType.Getter)]
     public class LashDamage
     {

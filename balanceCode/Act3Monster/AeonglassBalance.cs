@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act3Monster;
 
 public class AeonglassBalance
 {
+    // Balance: EbbDamage 30(35) → 25(30)
     [HarmonyPatch(typeof(Aeonglass), "EbbDamage", MethodType.Getter)]
     public class EbbDamage
     {
@@ -16,7 +17,8 @@ public class AeonglassBalance
             return false;
         }
     }
-    
+
+    // Balance: EbbBlock 30(35) → 25(30)
     [HarmonyPatch(typeof(Aeonglass), "EbbBlock", MethodType.Getter)]
     public class EbbBlock
     {
@@ -26,7 +28,7 @@ public class AeonglassBalance
             return false;
         }
     }
-    
+
     [HarmonyPatch(typeof(Aeonglass), "IncreasingIntensityBaseStrength", MethodType.Getter)]
     public class IncreasingIntensityBaseStrength
     {

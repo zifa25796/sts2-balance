@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
@@ -8,6 +8,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class VineShamblerBalance
 {
+    // Balance: ChompDamage 17(19) → 15(17)
     [HarmonyPatch(typeof(VineShambler))]
     public class ChompDamage
     {

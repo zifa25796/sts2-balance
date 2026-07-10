@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act3Monster;
 
 public class ScrollOfBitingBalance
 {
+    // Balance: ChompDamage 15(17) → 13(15)
     [HarmonyPatch(typeof(ScrollOfBiting), "ChompDamage", MethodType.Getter)]
     public class ChompDamage
     {

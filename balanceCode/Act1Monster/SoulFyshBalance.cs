@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -8,6 +8,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class SoulFyshBalance
 {
+    // Balance: MinHp 216(216) → 206(216)
     [HarmonyPatch(typeof(SoulFysh), nameof(SoulFysh.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -18,6 +19,7 @@ public class SoulFyshBalance
         }
     }
 
+    // Balance: MaxHp 216(216) → 206(216)
     [HarmonyPatch(typeof(SoulFysh), nameof(SoulFysh.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {
@@ -27,7 +29,8 @@ public class SoulFyshBalance
             return false;
         }
     }
-    
+
+    // Balance: ScreamDamage 13(15) → 11(13)
     [HarmonyPatch(typeof(SoulFysh), "ScreamDamage", MethodType.Getter)]
     public class ScreamDamage
     {
@@ -37,7 +40,8 @@ public class SoulFyshBalance
             return false;
         }
     }
-    
+
+    // Balance: GazeDamage 6(7) → 5(6)
     [HarmonyPatch(typeof(SoulFysh), "GazeDamage", MethodType.Getter)]
     public class GazeDamage
     {

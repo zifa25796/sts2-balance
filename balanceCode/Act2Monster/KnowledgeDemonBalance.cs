@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act2Monster;
 
 public class KnowledgeDemonBalance
 {
+    // Balance: MinHp 389 → 369(389)
     [HarmonyPatch(typeof(KnowledgeDemon), nameof(KnowledgeDemon.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -17,6 +18,7 @@ public class KnowledgeDemonBalance
         }
     }
 
+    // Balance: MaxHp 389 → 369(389)
     [HarmonyPatch(typeof(KnowledgeDemon), nameof(KnowledgeDemon.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {
@@ -26,7 +28,8 @@ public class KnowledgeDemonBalance
             return false;
         }
     }
-    
+
+    // Balance: SlapDamage 16(18) → 15(16)
     [HarmonyPatch(typeof(KnowledgeDemon), "SlapDamage", MethodType.Getter)]
     public class SlapDamage
     {
@@ -36,7 +39,8 @@ public class KnowledgeDemonBalance
             return false;
         }
     }
-    
+
+    // Balance: KnowledgeOverwhelmingDamage 8(9) → 7(8)
     [HarmonyPatch(typeof(KnowledgeDemon), "KnowledgeOverwhelmingDamage", MethodType.Getter)]
     public class KnowledgeOverwhelmingDamage
     {
@@ -46,7 +50,8 @@ public class KnowledgeDemonBalance
             return false;
         }
     }
-    
+
+    // Balance: PonderDamage 6(7) → 5(6)
     [HarmonyPatch(typeof(KnowledgeDemon), "PonderDamage", MethodType.Getter)]
     public class PonderDamage
     {
@@ -56,7 +61,8 @@ public class KnowledgeDemonBalance
             return false;
         }
     }
-    
+
+    // Balance: PonderStrength 4(5) → 3(4)
     [HarmonyPatch(typeof(KnowledgeDemon), "PonderStrength", MethodType.Getter)]
     public class PonderStrength
     {

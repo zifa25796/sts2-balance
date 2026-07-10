@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act2Monster;
 
 public class BowlbugNectarBalance
 {
+    // Balance: MinHp 36-37(37-38) → 33-36(34-37)
     [HarmonyPatch(typeof(BowlbugNectar), nameof(BowlbugNectar.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -17,6 +18,7 @@ public class BowlbugNectarBalance
         }
     }
 
+    // Balance: MaxHp 36-37(37-38) → 33-36(34-37)
     [HarmonyPatch(typeof(BowlbugNectar), nameof(BowlbugNectar.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {

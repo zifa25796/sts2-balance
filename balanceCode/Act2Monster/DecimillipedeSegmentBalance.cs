@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using Godot;
 using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
@@ -14,6 +14,7 @@ namespace balance.balanceCode.Act2Monster;
 
 public class DecimillipedeSegmentBalance
 {
+    // Balance: MinHp 44-48(48-52) → 38-44(42-48)
     [HarmonyPatch(typeof(DecimillipedeSegment), nameof(DecimillipedeSegment.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -24,6 +25,7 @@ public class DecimillipedeSegmentBalance
         }
     }
 
+    // Balance: MaxHp 44-48(48-52) → 38-44(42-48)
     [HarmonyPatch(typeof(DecimillipedeSegment), nameof(DecimillipedeSegment.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {
@@ -33,7 +35,8 @@ public class DecimillipedeSegmentBalance
             return false;
         }
     }
-    
+
+    // Balance: ConstrictDamage 7(8) → 6(7)
     [HarmonyPatch(typeof(DecimillipedeSegment), "ConstrictDamage", MethodType.Getter)]
     public class ConstrictDamage
     {
@@ -43,7 +46,8 @@ public class DecimillipedeSegmentBalance
             return false;
         }
     }
-    
+
+    // Balance: BulkDamage 6(7) → 5(6)
     [HarmonyPatch(typeof(DecimillipedeSegment), "BulkDamage", MethodType.Getter)]
     public class BulkDamage
     {

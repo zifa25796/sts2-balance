@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class PhrogParasiteBalance
 {
+    // Balance: MinHp 56-59(61-63) → lowered
     [HarmonyPatch(typeof(PhrogParasite), nameof(PhrogParasite.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -17,6 +18,7 @@ public class PhrogParasiteBalance
         }
     }
 
+    // Balance: MaxHp 56-59(61-63) → lowered
     [HarmonyPatch(typeof(PhrogParasite), nameof(PhrogParasite.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {

@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Commands;
@@ -12,10 +12,11 @@ namespace balance.balanceCode.Event;
 
 public class TrialBalance
 {
+    // Balance: 1 Shame curse, upgrade 3 cards
     [HarmonyPatch]
     public class MerchantInnocent
     {
-        
+
         static MethodBase TargetMethod()
         {
             return typeof(Trial).GetMethod("MerchantInnocent",

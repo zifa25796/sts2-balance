@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class WrigglerBalance
 {
+    // Balance: MinHp 16-19(17-20) → lowered
     [HarmonyPatch(typeof(Wriggler), nameof(Wriggler.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -17,6 +18,7 @@ public class WrigglerBalance
         }
     }
 
+    // Balance: MaxHp 16-19(17-20) → lowered
     [HarmonyPatch(typeof(Wriggler), nameof(Wriggler.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {
@@ -26,7 +28,8 @@ public class WrigglerBalance
             return false;
         }
     }
-    
+
+    // Balance: BiteDamage 6(7) → 5(6)
     [HarmonyPatch(typeof(Wriggler), "BiteDamage", MethodType.Getter)]
     public class BiteDamage
     {

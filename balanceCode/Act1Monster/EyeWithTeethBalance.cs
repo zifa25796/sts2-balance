@@ -8,6 +8,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class EyeWithTeethBalance
 {
+    // Balance: MinHp 6 → 5
     [HarmonyPatch(typeof(EyeWithTeeth), nameof(EyeWithTeeth.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -18,6 +19,7 @@ public class EyeWithTeethBalance
         }
     }
 
+    // Balance: MaxHp 6 → 5
     [HarmonyPatch(typeof(EyeWithTeeth), nameof(EyeWithTeeth.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {

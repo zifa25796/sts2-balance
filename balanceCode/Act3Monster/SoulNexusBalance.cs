@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act3Monster;
 
 public class SoulNexusBalance
 {
+    // Balance: MinHp 248 → 228
     [HarmonyPatch(typeof(SoulNexus), nameof(SoulNexus.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -17,6 +18,7 @@ public class SoulNexusBalance
         }
     }
 
+    // Balance: MaxHp 248 → 228
     [HarmonyPatch(typeof(SoulNexus), nameof(SoulNexus.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {
@@ -26,7 +28,8 @@ public class SoulNexusBalance
             return false;
         }
     }
-    
+
+    // Balance: DrainLifeDamage 15(17) → 14(15)
     [HarmonyPatch(typeof(SoulNexus), "DrainLifeDamage", MethodType.Getter)]
     public class DrainLifeDamage
     {

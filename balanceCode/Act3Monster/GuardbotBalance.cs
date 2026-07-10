@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act3Monster;
 
 public class GuardbotBalance
 {
+    // Balance: MinHp 19-20(20-21) → 15-19(16-20)
     [HarmonyPatch(typeof(Guardbot), nameof(Guardbot.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -17,6 +18,7 @@ public class GuardbotBalance
         }
     }
 
+    // Balance: MaxHp 19-20(20-21) → 15-19(16-20)
     [HarmonyPatch(typeof(Guardbot), nameof(Guardbot.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {

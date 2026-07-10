@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class FlyconidBalance
 {
+    // Balance: SporeDamage 8(9) → 7(8)
     [HarmonyPatch(typeof(Flyconid), "SporeDamage", MethodType.Getter)]
     public class SporeDamage
     {
@@ -17,6 +18,7 @@ public class FlyconidBalance
         }
     }
     
+    // Balance: SmashDamage 11(12) → 10(11)
     [HarmonyPatch(typeof(Flyconid), "SmashDamage", MethodType.Getter)]
     public class SmashDamage
     {

@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class ByrdonisBalance
 {
+    // Balance: SwoopDamage 18(20) → 16(18)
     [HarmonyPatch(typeof(Byrdonis), "SwoopDamage", MethodType.Getter)]
     public class SwoopDamage
     {

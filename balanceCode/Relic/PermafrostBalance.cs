@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
@@ -12,6 +12,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace balance.balanceCode.Relic;
 
+// Balance: Gain 10 block at start of combat
 [HarmonyPatch(typeof(Permafrost), "get_CanonicalVars")]
 public class PermafrostBalance
 {

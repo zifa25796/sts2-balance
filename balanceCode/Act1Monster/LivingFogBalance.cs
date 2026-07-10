@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class LivingFogBalance
 {
+    // Balance: AdvancedGasDamage 7(8) → 6(7)
     [HarmonyPatch(typeof(LivingFog), "AdvancedGasDamage", MethodType.Getter)]
     public class AdvancedGasDamage
     {

@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Event;
 
 public class BattewornDummyBalance
 {
+    // Balance: HP set to 250
     [HarmonyPatch(typeof(BattleFriendV3), nameof(BattleFriendV3.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -17,6 +18,7 @@ public class BattewornDummyBalance
         }
     }
 
+    // Balance: HP set to 250
     [HarmonyPatch(typeof(BattleFriendV3), nameof(BattleFriendV3.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {

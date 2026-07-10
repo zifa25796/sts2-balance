@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act2Monster;
 
 public class ThievingHopperBalance
 {
+    // Balance: TheftDamage 16(18) → 14(16)
     [HarmonyPatch(typeof(ThievingHopper), "TheftDamage", MethodType.Getter)]
     public class TheftDamage
     {
@@ -16,7 +17,8 @@ public class ThievingHopperBalance
             return false;
         }
     }
-    
+
+    // Balance: NabDamage 14(16) → 12(14)
     [HarmonyPatch(typeof(ThievingHopper), "NabDamage", MethodType.Getter)]
     public class NabDamage
     {
@@ -26,7 +28,8 @@ public class ThievingHopperBalance
             return false;
         }
     }
-    
+
+    // Balance: HatTrickDamage 22(24) → 20(22)
     [HarmonyPatch(typeof(ThievingHopper), "HatTrickDamage", MethodType.Getter)]
     public class HatTrickDamage
     {

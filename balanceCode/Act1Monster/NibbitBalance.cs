@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act1Monster;
 public class NibbitBalance
 {
 
+    // Balance: ButtDamage 12(13) → 9(10)
     [HarmonyPatch(typeof(Nibbit), "ButtDamage", MethodType.Getter)]
     public class ButtDamage
     {
@@ -17,6 +18,7 @@ public class NibbitBalance
         }
     }
     
+    // Balance: SliceDamage 6(7) → 5(6)
     [HarmonyPatch(typeof(Nibbit), "SliceDamage", MethodType.Getter)]
     public class SliceDamage
     {

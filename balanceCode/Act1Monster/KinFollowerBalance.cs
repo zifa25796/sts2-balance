@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class KinFollowerBalance
 {
+    // Balance: MinHp 54-55(58-59) → lowered
     [HarmonyPatch(typeof(KinFollower), nameof(KinFollower.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -17,6 +18,7 @@ public class KinFollowerBalance
         }
     }
 
+    // Balance: MaxHp 54-55(58-59) → lowered
     [HarmonyPatch(typeof(KinFollower), nameof(KinFollower.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {
@@ -26,6 +28,6 @@ public class KinFollowerBalance
             return false;
         }
     }
-    
-    
+
+
 }

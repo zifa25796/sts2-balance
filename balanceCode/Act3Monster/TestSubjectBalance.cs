@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act3Monster;
 
 public class TestSubjectBalance
 {
+    // Balance: FirstFormHp 105 → 100
     [HarmonyPatch(typeof(TestSubject), "FirstFormHp", MethodType.Getter)]
     public class FirstFormHp
     {
@@ -16,7 +17,8 @@ public class TestSubjectBalance
             return false;
         }
     }
-    
+
+    // Balance: SecondFormHp 210 → 200
     [HarmonyPatch(typeof(TestSubject), "SecondFormHp", MethodType.Getter)]
     public class SecondFormHp
     {
@@ -26,7 +28,8 @@ public class TestSubjectBalance
             return false;
         }
     }
-    
+
+    // Balance: ThirdFormHp 315 → 300
     [HarmonyPatch(typeof(TestSubject), "ThirdFormHp", MethodType.Getter)]
     public class ThirdFormHp
     {
@@ -36,7 +39,8 @@ public class TestSubjectBalance
             return false;
         }
     }
-    
+
+    // Balance: SkullBashDamage 12(14) → 10(12)
     [HarmonyPatch(typeof(TestSubject), "SkullBashDamage", MethodType.Getter)]
     public class SkullBashDamage
     {
@@ -46,7 +50,8 @@ public class TestSubjectBalance
             return false;
         }
     }
-    
+
+    // Balance: MultiClawDamage 10(11) → 9(10)
     [HarmonyPatch(typeof(TestSubject), "MultiClawDamage", MethodType.Getter)]
     public class MultiClawDamage
     {
@@ -56,7 +61,7 @@ public class TestSubjectBalance
             return false;
         }
     }
-    
+
     [HarmonyPatch(typeof(TestSubject), "BigPounceDamage", MethodType.Getter)]
     public class BigPounceDamage
     {

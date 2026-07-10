@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
@@ -13,6 +13,7 @@ using MegaCrit.Sts2.Core.Models.Relics;
 
 namespace balance.balanceCode.Relic;
 
+// Balance: Upgrades 2 attacks (prefers non-Basic for 2nd)
 [HarmonyPatch(typeof(Whetstone), nameof(Whetstone.AfterObtained))]
 public class WhetstoneBalance
 {

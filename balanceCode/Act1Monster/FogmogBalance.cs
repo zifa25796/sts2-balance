@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class FogmogBalance
 {
+    // Balance: SwipeDamage 8(9) → 7(8)
     [HarmonyPatch(typeof(Fogmog), "SwipeDamage", MethodType.Getter)]
     public class SwipeDamage
     {
@@ -17,6 +18,7 @@ public class FogmogBalance
         }
     }
     
+    // Balance: HeadbuttDamage 14(16) → 13(15)
     [HarmonyPatch(typeof(Fogmog), "HeadbuttDamage", MethodType.Getter)]
     public class HeadbuttDamage
     {

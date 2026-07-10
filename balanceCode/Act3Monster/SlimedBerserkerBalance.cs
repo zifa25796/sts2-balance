@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act3Monster;
 
 public class SlimedBerserkerBalance
 {
+    // Balance: MinHp 273 → 255
     [HarmonyPatch(typeof(SlimedBerserker), nameof(SlimedBerserker.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -17,6 +18,7 @@ public class SlimedBerserkerBalance
         }
     }
 
+    // Balance: MaxHp 273 → 255
     [HarmonyPatch(typeof(SlimedBerserker), nameof(SlimedBerserker.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {

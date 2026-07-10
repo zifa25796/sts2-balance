@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act2Monster;
 
 public class MyteBalance
 {
+    // Balance: BiteDamage 14(16) → 12(14)
     [HarmonyPatch(typeof(Myte), "BiteDamage", MethodType.Getter)]
     public class BiteDamage
     {

@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
@@ -13,6 +13,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class SewerClamBalance
 {
+    // Balance: JetDamage 7(8) → 6(7)
     [HarmonyPatch(typeof(SewerClam), "JetDamage", MethodType.Getter)]
     public class JetDamage
     {
@@ -22,7 +23,8 @@ public class SewerClamBalance
             return false;
         }
     }
-    
+
+    // Balance: Pressurize grants 6 Strength
     [HarmonyPatch]
     public class PressurizeMove
     {

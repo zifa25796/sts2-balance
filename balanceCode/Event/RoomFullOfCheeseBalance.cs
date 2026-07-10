@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Events;
@@ -8,6 +8,7 @@ namespace balance.balanceCode.Event;
 
 public class RoomFullOfCheeseBalance
 {
+    // Balance: Damage scales: 8 (Act 1+) / 14 (otherwise)
     [HarmonyPatch(typeof(RoomFullOfCheese), "GenerateInitialOptions")]
     public class GenerateInitialOptionsPatch
     {

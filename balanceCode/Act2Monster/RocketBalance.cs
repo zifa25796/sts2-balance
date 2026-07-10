@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act2Monster;
 
 public class RocketBalance
 {
+    // Balance: PrecisionBeamDamage 17(19) → 15(17)
     [HarmonyPatch(typeof(Rocket), "PrecisionBeamDamage", MethodType.Getter)]
     public class PrecisionBeamDamage
     {
@@ -16,7 +17,8 @@ public class RocketBalance
             return false;
         }
     }
-    
+
+    // Balance: LaserDamage 34(36) → 32(34)
     [HarmonyPatch(typeof(Rocket), "LaserDamage", MethodType.Getter)]
     public class LaserDamage
     {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -24,7 +24,7 @@ public class SlipperyBridgeBalance
         AccessTools.Field(typeof(SlipperyBridge), "_numberOfHoldOns");
 
 
-    // 修改 CurrentHpLoss
+    // Balance: HP loss starts at 2, each Hold On +1
     [HarmonyPatch(typeof(SlipperyBridge), "CurrentHpLoss", MethodType.Getter)]
     public static class CurrentHpLossPatch
     {
@@ -42,7 +42,7 @@ public class SlipperyBridgeBalance
     }
 
 
-    // 重写随机卡逻辑
+    // Balance: First card removal no longer excludes Basic cards
     [HarmonyPatch(typeof(SlipperyBridge), "GetNewRandomCard")]
     public static class GetNewRandomCardPatch
     {

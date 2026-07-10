@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
@@ -16,6 +16,7 @@ namespace balance.balanceCode.Act3Monster;
 
 public class TheForgottenBalance
 {
+    // Balance: MinHp 105 → 99
     [HarmonyPatch(typeof(TheForgotten), nameof(TheForgotten.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -26,6 +27,7 @@ public class TheForgottenBalance
         }
     }
 
+    // Balance: MaxHp 105 → 99
     [HarmonyPatch(typeof(TheForgotten), nameof(TheForgotten.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {
@@ -35,7 +37,8 @@ public class TheForgottenBalance
             return false;
         }
     }
-    
+
+    // Balance: DreadDamage 12(14) → 10+dex(12+dex)
     [HarmonyPatch(typeof(TheForgotten), "DreadDamage", MethodType.Getter)]
     [HarmonyPostfix]
     public static void DreadDamagePostfix(
@@ -53,8 +56,9 @@ public class TheForgottenBalance
             )
             + dex;
     }
-    
-    
+
+
+    // Balance: Miasma steals dexterity
     [HarmonyPatch]
     public class MiasmaMove
     {

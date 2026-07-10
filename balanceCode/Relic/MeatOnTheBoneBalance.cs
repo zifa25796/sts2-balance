@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Commands.Builders;
@@ -16,7 +16,8 @@ public class MeatOnTheBoneBalance
     private static readonly Func<MeatOnTheBone, bool> WillHealOnCombatFinished =
         AccessTools.MethodDelegate<Func<MeatOnTheBone, bool>>(
             AccessTools.Method(typeof(MeatOnTheBone), "WillHealOnCombatFinished"));
-    
+
+    // Balance: Heals 3 if HP between threshold and 70%
     [HarmonyPatch]
     public class AfterCombatVictoryEarly
     {
@@ -51,6 +52,6 @@ public class MeatOnTheBoneBalance
                 await CreatureCmd.Heal(creature, meatOnTheBone.DynamicVars.Heal.BaseValue);
             }
         }
-        
+
     }
 }

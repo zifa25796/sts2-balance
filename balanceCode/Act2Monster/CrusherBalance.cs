@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act2Monster;
 
 public class CrusherBalance
 {
+    // Balance: ThrashDamage 16(18) → 14(16)
     [HarmonyPatch(typeof(Crusher), "ThrashDamage", MethodType.Getter)]
     public class ThrashDamage
     {
@@ -16,7 +17,8 @@ public class CrusherBalance
             return false;
         }
     }
-    
+
+    // Balance: BugStingDamage 6(7) → 5(6)
     [HarmonyPatch(typeof(Crusher), "BugStingDamage", MethodType.Getter)]
     public class BugStingDamage
     {
@@ -26,7 +28,8 @@ public class CrusherBalance
             return false;
         }
     }
-    
+
+    // Balance: GuardedStrikeDamage 12(14) → 10(12)
     [HarmonyPatch(typeof(Crusher), "GuardedStrikeDamage", MethodType.Getter)]
     public class GuardedStrikeDamage
     {

@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
@@ -15,6 +15,7 @@ namespace balance.balanceCode.Relic;
 
 public class CentennialPuzzleBalance
 {
+    // Balance: After trigger, gain 3 Block Next Turn
     [HarmonyPatch(typeof(CentennialPuzzle), nameof(CentennialPuzzle.AfterDamageReceived))]
     public static class CentennialPuzzle_AddBlockNextTurn_Patch
     {

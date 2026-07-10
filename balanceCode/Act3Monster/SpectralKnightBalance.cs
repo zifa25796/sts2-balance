@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act3Monster;
 
 public class SpectralKnightBalance
 {
+    // Balance: MinHp 93 → 89
     [HarmonyPatch(typeof(SpectralKnight), nameof(SpectralKnight.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -17,6 +18,7 @@ public class SpectralKnightBalance
         }
     }
 
+    // Balance: MaxHp 93 → 89
     [HarmonyPatch(typeof(SpectralKnight), nameof(SpectralKnight.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {

@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
@@ -18,6 +18,7 @@ namespace balance.balanceCode.Relic;
 
 public class IntimidatingHelmetBalance
 {
+    // Balance: Grants 2× energy as block for cards costing 2+ energy
     [HarmonyPatch]
     public class BeforeCardPlayed
     {

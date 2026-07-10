@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class BygoneEffigyBalance
 {
+    // Balance: MinHp 130(130) → 125(130)
     [HarmonyPatch(typeof(BygoneEffigy), nameof(BygoneEffigy.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -17,6 +18,7 @@ public class BygoneEffigyBalance
         }
     }
 
+    // Balance: MaxHp 130(130) → 125(130)
     [HarmonyPatch(typeof(BygoneEffigy), nameof(BygoneEffigy.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {

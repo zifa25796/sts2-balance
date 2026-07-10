@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act3Monster;
 
 public class FrogKnightBalance
 {
+    // Balance: TongueLashDamage 10(11) → 9(10)
     [HarmonyPatch(typeof(FrogKnight), "TongueLashDamage", MethodType.Getter)]
     public class TongueLashDamage
     {
@@ -16,7 +17,8 @@ public class FrogKnightBalance
             return false;
         }
     }
-    
+
+    // Balance: StrikeDownEvilDamage 22(24) → 20(22)
     [HarmonyPatch(typeof(FrogKnight), "StrikeDownEvilDamage", MethodType.Getter)]
     public class StrikeDownEvilDamage
     {

@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
@@ -21,6 +21,7 @@ namespace balance.balanceCode.Relic;
 
 public class SwordOfJadeBalance
 {
+    // Balance: Reworked: gain 1 Str + 1 Dex per combat, Dexterity also adds to attack damage
     [HarmonyPatch(typeof(SwordOfJade), "get_CanonicalVars")]
     public class CanonicalVarsPatch
     {
@@ -32,7 +33,7 @@ public class SwordOfJadeBalance
             };
         }
     }
-    
+
     [HarmonyPatch]
     public class AfterRoomEntered
     {

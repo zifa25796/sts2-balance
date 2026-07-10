@@ -1,10 +1,11 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Events;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace balance.balanceCode.Event;
 
+// Balance: Gold reward 129
 [HarmonyPatch(typeof(LuminousChoir), "get_CanonicalVars")]
 public class LuminousChoirBalance
 {

@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class GasBombBalance
 {
+    // Balance: MinHp 6(6) → 5(6)
     [HarmonyPatch(typeof(GasBomb), nameof(GasBomb.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -17,6 +18,7 @@ public class GasBombBalance
         }
     }
 
+    // Balance: MaxHp 6(6) → 5(6)
     [HarmonyPatch(typeof(GasBomb), nameof(GasBomb.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {
@@ -26,7 +28,8 @@ public class GasBombBalance
             return false;
         }
     }
-    
+
+    // Balance: ExplodeDamage 10(11) → 9(10)
     [HarmonyPatch(typeof(GasBomb), "ExplodeDamage", MethodType.Getter)]
     public class ExplodeDamage
     {

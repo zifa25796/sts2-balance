@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act3Monster;
 
 public class AxebotBalance
 {
+    // Balance: HammerUppercutDamage 11(13) → 9(11)
     [HarmonyPatch(typeof(Axebot), "HammerUppercutDamage", MethodType.Getter)]
     public class HammerUppercutDamage
     {

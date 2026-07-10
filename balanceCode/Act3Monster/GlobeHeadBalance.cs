@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act3Monster;
 
 public class GlobeHeadBalance
 {
+    // Balance: ShockingSlapDamage 11(12) → 10(11)
     [HarmonyPatch(typeof(GlobeHead), "ShockingSlapDamage", MethodType.Getter)]
     public class ShockingSlapDamage
     {
@@ -16,7 +17,8 @@ public class GlobeHeadBalance
             return false;
         }
     }
-    
+
+    // Balance: GalvanicBurstDamage 15(17) → 14(15)
     [HarmonyPatch(typeof(GlobeHead), "GalvanicBurstDamage", MethodType.Getter)]
     public class GalvanicBurstDamage
     {
@@ -26,7 +28,8 @@ public class GlobeHeadBalance
             return false;
         }
     }
-    
+
+    // Balance: ThunderStrikeDamage 8(9) → 7(8)
     [HarmonyPatch(typeof(GlobeHead), "ThunderStrikeDamage", MethodType.Getter)]
     public class ThunderStrikeDamage
     {

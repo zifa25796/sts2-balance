@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class ToadpoleBalance
 {
+    // Balance: MinHp 20-24(20-24) → 19-23
     [HarmonyPatch(typeof(Toadpole), nameof(Toadpole.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -17,6 +18,7 @@ public class ToadpoleBalance
         }
     }
 
+    // Balance: MaxHp 20-24(20-24) → 19-23
     [HarmonyPatch(typeof(Toadpole), nameof(Toadpole.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {
@@ -26,7 +28,7 @@ public class ToadpoleBalance
             return false;
         }
     }
-    
+
     [HarmonyPatch(typeof(Toadpole), "SpikeSpitDamage", MethodType.Getter)]
     public class SpikeSpitDamage
     {
@@ -36,7 +38,8 @@ public class ToadpoleBalance
             return false;
         }
     }
-    
+
+    // Balance: WhirlDamage 7(8) → 6(7)
     [HarmonyPatch(typeof(Toadpole), "WhirlDamage", MethodType.Getter)]
     public class WhirlDamage
     {
@@ -46,7 +49,7 @@ public class ToadpoleBalance
             return false;
         }
     }
-    
+
     [HarmonyPatch(typeof(Toadpole), "SpikenAmount", MethodType.Getter)]
     public class SpikenAmount
     {

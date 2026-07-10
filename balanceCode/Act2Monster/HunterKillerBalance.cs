@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act2Monster;
 
 public class HunterKillerBalance
 {
+    // Balance: MinHp 111-121(116-126) → 111(116)
     [HarmonyPatch(typeof(HunterKiller), nameof(HunterKiller.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -17,6 +18,7 @@ public class HunterKillerBalance
         }
     }
 
+    // Balance: MaxHp 111-121(116-126) → 111(116)
     [HarmonyPatch(typeof(HunterKiller), nameof(HunterKiller.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {
@@ -26,7 +28,8 @@ public class HunterKillerBalance
             return false;
         }
     }
-    
+
+    // Balance: BiteDamage 16(18) → 14(16)
     [HarmonyPatch(typeof(HunterKiller), "BiteDamage", MethodType.Getter)]
     public class BiteDamage
     {
@@ -36,7 +39,8 @@ public class HunterKillerBalance
             return false;
         }
     }
-    
+
+    // Balance: PunctureDamage 7(8) → 6(7)
     [HarmonyPatch(typeof(HunterKiller), "PunctureDamage", MethodType.Getter)]
     public class PunctureDamage
     {

@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class VantomBalance
 {
+    // Balance: MinHp 168(178) → 168(178)
     [HarmonyPatch(typeof(Vantom), nameof(Vantom.MinInitialHp), MethodType.Getter)]
     public class MinHp
     {
@@ -17,6 +18,7 @@ public class VantomBalance
         }
     }
 
+    // Balance: MaxHp 168(178) → 168(178)
     [HarmonyPatch(typeof(Vantom), nameof(Vantom.MaxInitialHp), MethodType.Getter)]
     public class MaxHp
     {
@@ -26,7 +28,8 @@ public class VantomBalance
             return false;
         }
     }
-    
+
+    // Balance: InkyLanceDamage 6(7) → 5(6)
     [HarmonyPatch(typeof(Vantom), "InkyLanceDamage", MethodType.Getter)]
     public class InkyLanceDamage
     {

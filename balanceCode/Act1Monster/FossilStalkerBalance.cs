@@ -1,4 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Entities.Ascension;
+using MegaCrit.Sts2.Core.Entities.Ascension;
 using MegaCrit.Sts2.Core.Helpers;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models.Monsters;
@@ -8,6 +8,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class FossilStalkerBalance
 {
+    // Balance: TackleDamage 9(11) → 7(9)
     [HarmonyPatch(typeof(FossilStalker), "TackleDamage", MethodType.Getter)]
     public class TackleDamage
     {

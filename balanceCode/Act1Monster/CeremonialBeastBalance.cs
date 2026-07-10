@@ -7,6 +7,7 @@ namespace balance.balanceCode.Act1Monster;
 
 public class CeremonialBeastBalance
 {
+    // Balance: PlowDamage 19(21) → 17(19)
     [HarmonyPatch(typeof(CeremonialBeast), "PlowDamage", MethodType.Getter)]
     public class PlowDamage
     {
@@ -17,6 +18,7 @@ public class CeremonialBeastBalance
         }
     }
     
+    // Balance: StompDamage 16(18) → 14(16)
     [HarmonyPatch(typeof(CeremonialBeast), "StompDamage", MethodType.Getter)]
     public class StompDamage
     {
@@ -27,6 +29,7 @@ public class CeremonialBeastBalance
         }
     }
     
+    // Balance: CrushDamage 18(20) → 16(18)
     [HarmonyPatch(typeof(CeremonialBeast), "CrushDamage", MethodType.Getter)]
     public class CrushDamage
     {
@@ -37,6 +40,7 @@ public class CeremonialBeastBalance
         }
     }
     
+    // Balance: CrushStrength set to 3
     [HarmonyPatch(typeof(CeremonialBeast), "CrushStrength", MethodType.Getter)]
     public class CrushStrength
     {
