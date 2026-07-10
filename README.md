@@ -1,155 +1,140 @@
-# STS2 Balance Mod
+# STS2 Balance Mod Patch Notes
 
-A Slay the Spire 2 balance modification mod that adjusts enemy stats for a more balanced experience, especially in multiplayer.
+## General Changes
 
-## Changes
+| Feature | Changes |
+|---|---|
+| Multiplayer Enemy HP Scaling | Act 1: 1.0x player count<br>Act 2: 1.1x player count<br>Act 3: 1.2x player count |
+| Quest Cards | When drawn: Exhaust Quest card and draw 1 card |
 
-### Multiplayer HP Scaling
+---
 
-| Act | Scaling Multiplier |
-|-----|-------------------|
-| Act 1 | 1.0x |
-| Act 2 | 1.1x |
-| Act 3 | 1.2x |
+# Enemy Balance Changes
 
-### Mechanics
+## Act 1 - Overgrowth
 
-| Mechanic | Change |
-|----------|--------|
-| **Quest Cards** | Whenever you draw a Quest card, Exhaust it and draw a card |
+| Enemy | Changes | Reason |
+|---|---|---|
+| Nibbit / Nibbits | Butt damage 12(13) → 9(10)<br>Slice damage 6(7) → 5(6) | Reduce early chip damage |
+| Shrinker Beetle | HP 38–40(40–42) → 34–36(36–38) | Slight HP reduction |
+| Cubex Construct | Repeater Blast Strength gain 2 → 1 | Reduce early scaling |
+| Flyconid | Frail Spores 8(9) → 7(8)<br>Smash 11(12) → 10(11) | Reduce multi-action damage |
+| Fogmog | Swipe 8(9) → 7(8)<br>Headbutt 14(16) → 13(15)<br>Eye with Teeth HP 6 → 5 | Reduce pressure, make minion easier to answer |
+| Slithering Strangler | Damage reduced, block reduced | Shift identity toward debuffs |
+| Vine Shambler | Chomp 16(18) → 15(17) | Slight damage reduction |
+| Bygone Effigy | HP 127(132) → 125(130) | Improve early Slow value |
+| Byrdonis | Swoop 17(19) → 16(18) | Slight damage reduction |
+| Phrog Parasite | Reduce main body and Wriggler HP, Bite 6(7) → 5(6) | Reduce minion durability |
+| Ceremonial Beast | Reduce Plow/Stomp/Crush damage, reduce Strength gain | Reduce burst damage |
+| The Kin | Kin Follower HP reduced | Reduce follower durability |
+| Vantom | HP 173(183) → 168(178)<br>Inky Lance 6x2(7x2) → 5x2(6x2) | General reduction |
 
-### Monster Adjustments — Act 1
+---
 
-| Monster | Change |
-|---------|--------|
-| **Nibbit** | Butt damage: 12(13) → 9(10), Slice damage: 6(7) → 5(6) |
-| **Shrinker Beetle** | HP: 38-40 (40-42) → 34-36 (36-38) |
-| **Cubex Construct** | Repeater Blast strength gain: 2 → 1 |
-| **Flyconid** | Frail Spores damage: 8(9) → 7(8), Smash damage: 11(12) → 10(11) |
-| **Fogmog** | Swipe damage: 8(9) → 7(8), Headbutt damage: 14(16) → 13(15) |
-| **Eye with Teeth** | HP: 6 → 5 |
-| **Bygone Effigy** | HP: 130 (130) → 125 (130) |
-| **Byrdonis** | Swoop damage: 18(20) → 16(18) |
-| **Calcified Cultist** | Dark Strike damage: 10(11) → 8(10) |
-| **Ceremonial Beast** | Plow damage: 19(21) → 17(19), Stomp: 16(18) → 14(16), Crush: 18(20) → 16(18), Crush Strength: 3 |
-| **Fossil Stalker** | Tackle damage: 9(11) → 7(9) |
-| **Gas Bomb** | HP: 6 (6) → 5 (6), Explode damage: 10(11) → 9(10) |
-| **Gremlin Merc** | Double Smash: 6(7) → 5(6), Hehe: 7(8) → 6(7) |
-| **Kin Follower** | HP: 54-55 (58-59) → lower |
-| **Lagavulin Matriarch** | Slash: 20(22) → 18(20), Slash 2 damage/block: 13(15) → 11(13) |
-| **Living Fog** | Advanced Gas: 7(8) → 6(7) |
-| **Phantasmal Gardener** | HP: 28(30) → 26(28-29) |
-| **Phrog Parasite** | HP: 56-59 (61-63) → lower |
-| **Punch Construct** | Fast Punch: 5(6) → 4(5) |
-| **Seapunk** | Bubble block: 6(7) → 5(6) |
-| **Sewer Clam** | Jet damage: 7(8) → 6(7), Pressurize grants 6 Strength |
-| **Skulking Colony** | Inertia Strength gain: 3(4) → 2(3), Piercing Stabs: 7(8) → 6(7) |
-| **Slithering Strangler** | Thwack: 6(7) → 5(6), Lash: 11(12) → 10(11), Thwack blocks 4 |
-| **Sludge Spinner** | Rage grants 2 Strength |
-| **Soul Fysh** | HP: 216 (216) → 206 (216), Scream: 13(15) → 11(13), Gaze: 6(7) → 5(6) |
-| **Terror Eel** | Crash: 17(19) → 15(17) |
-| **Toadpole** | HP: 20-24 (20-24) → 19-23, Whirl: 7(8) → 6(7) |
-| **Two-Tailed Rat** | HP: 18-21 → 17-20 |
-| **Vantom** | HP: 168-168 (178-178) → 168 (178), Inky Lance: 6(7) → 5(6) |
-| **Vine Shambler** | Chomp: 17(19) → 15(17) |
-| **Waterfall Giant** | Stomp: 10(11) → 9(10), Ram: 15(16) → 14(15), Pressure Up: 12(13) → 11(12), Pressure Gun base: 18(20) → 15(18) |
-| **Wriggler** | HP: 16-19 (17-20) → lower, Bite: 6(7) → 5(6) |
+## Act 1 - Underdocks
 
-### Monster Adjustments — Act 2
+| Enemy | Changes | Reason |
+|---|---|---|
+| Seapunk | Bubble Burp block 7(8) → 5(6) | Reduce defense |
+| Sludge Spinner | Rage Strength gain 3 → 2 | Reduce early scaling |
+| Toadpoles | Lower HP and damage, increase thorn mechanics | Strengthen identity |
+| Cultists | Dark Strike 9(11) → 8(10) | Slight damage reduction |
+| Living Fog | Reduce gas damage and bomb HP, increase explosion damage | Shift power to mechanic |
+| Fossil Stalker | Tackle 9(11) → 7(9) | Reduce multi-action pressure |
+| Gremlin Merc | Reduce Double Smash and Hehe damage | Reduce burst |
+| Punch Construct | Fast Punch 5x2(6x2) → 4x2(5x2) | Slight damage reduction |
+| Sewer Clam | Jet 10(11) → 6(7)<br>Pressurize gain 4 → 6 | More scaling focused |
+| Two-Tailed Rats | Reduce HP variance | Reduce RNG |
+| Skulking Colony | Reduce Strength gain and stab damage | Reduce scaling |
+| Phantasmal Gardeners | Reduce HP range and damage | Reduce RNG |
+| Terror Eel | Crash 16(18) → 15(17) | Slight damage reduction |
+| Lagavulin Matriarch | Reduce Slash damage/block | Slight reduction |
+| Soul Fysh | Reduce HP and attack damage | Reduce multi-action damage |
+| Waterfall Giant | Redistribute damage and Steam Eruption scaling | Improve identity |
 
-| Monster | Change |
-|---------|--------|
-| **Chomper** | HP: 62-65 → 58-65 |
-| **Crusher** | Thrash: 16(18) → 14(16), Bug Sting: 6(7) → 5(6), Guarded Strike: 12(14) → 10(12) |
-| **Decimillipede Segment** | HP: 44-48 (48-52) → 38-44 (42-48), Constrict: 7(8) → 6(7), Bulk: 6(7) → 5(6) |
-| **Entomancer** | HP: 152 (152) → 142 (152), Spear: 18(20) → 16(18) |
-| **Exoskeleton** | HP: 26-27 → 24-27 |
-| **Hunter Killer** | HP: 111-121 (116-126) → 111 (116), Bite: 16(18) → 14(16), Puncture: 7(8) → 6(7) |
-| **Infested Prism** | Pulsate: 7(8) → 6(7) |
-| **Knowledge Demon** | HP: 389 → 369 (389), Slap: 16(18) → 15(16), Knowledge Overwhelming: 8(9) → 7(8), Ponder: 6(7) → 5(6), Ponder Strength: 4(5) → 3(4) |
-| **Myte** | Bite: 14(16) → 12(14) |
-| **Ovicopter** | Smash: 16(18) → 15(16), Tenderizer: 7(8) → 6(7) |
-| **Parafright** | HP: 15 → 15, Slam: 15(16) → 14(15) |
-| **Rocket** | Precision Beam: 17(19) → 15(17), Laser: 34(36) → 32(34) |
-| **Slumbering Beetle** | Plating: 16(18) → 13(16) |
-| **Spiny Toad** | Lash: 17(19) → 15(17) |
-| **The Insatiable** | Bite: 29(32) → 26(29) |
-| **Thieving Hopper** | Theft: 16(18) → 14(16), Nab: 14(16) → 12(14), Hat Trick: 22(24) → 20(22) |
-| **Tunneler** | Bite: 13(15) → 11(13), Below: 27(30) → 24(27) |
-| **Bowlbug Nectar** | HP: 36-37 (37-38) → 33-36 (34-37) |
-| **Bowlbug Rock** | Headbutt: 15(17) → 14(15) |
-| **Bowlbug Silk** | HP: 40-41 (41-42) → 38-40 (39-41) |
-| **Tough Egg** | HP: 17-18 (18-19) → 15-17 (16-18), Hatchling HP: 17-18 (18-19) → 15-17 (16-18) |
+---
 
-### Monster Adjustments — Act 3
+## Act 2 - Hive
 
-| Monster | Change |
-|---------|--------|
-| **Aeonglass** | Ebb damage/block: 30(35) → 25(30) |
-| **Axebot** | Hammer Uppercut: 11(13) → 9(11) |
-| **Fabricator** | Fabricating Strike: 16(18) → 13(16) |
-| **Flail Knight** | Flail damage: 9(10) → 8(9) |
-| **Frog Knight** | Tongue Lash: 10(11) → 9(10), Strike Down Evil: 22(24) → 20(22) |
-| **Globe Head** | Shocking Slap: 11(12) → 10(11), Galvanic Burst: 15(17) → 14(15), Thunder Strike: 8(9) → 7(8) |
-| **Guardbot** | HP: 19-20 (20-21) → 15-19 (16-20) |
-| **Living Shield** | HP: 70 → 60 |
-| **Magi Knight** | Power Shield damage: 6(7) → 5(6), Power Shield block: 7(8) → 6(7) |
-| **Mecha Knight** | Charge: 25(30) → 20(25) |
-| **Noisebot** | HP: 22-23 (23-24) → 17-22 (18-23) |
-| **Owl Magistrate** | HP: 240 → 225 |
-| **Scroll of Biting** | Chomp: 15(17) → 13(15) |
-| **Slimed Berserker** | HP: 273 → 255 |
-| **Soul Nexus** | HP: 248 → 228, Drain Life: 15(17) → 14(15) |
-| **Spectral Knight** | HP: 93 → 89 |
-| **Stabbot** | HP: 22-23 (23-24) → 17-22 (18-23) |
-| **Test Subject** | Form 1 HP: 105 → 100, Form 2: 210 → 200, Form 3: 315 → 300, Skull Bash: 12(14) → 10(12), Multi Claw: 10(11) → 9(10) |
-| **The Forgotten** | HP: 105 → 99, Dread: 12(14) → 10+dex(12+dex), Miasma steals dexterity |
-| **The Lost** | HP: 105 → 99 |
-| **Torch Head Amalgam** | Weak Tackle: 12(13) → 11(12) |
-| **Turret Operator** | HP: 45 → 35 |
-| **Zapbot** | HP: 22-23 (23-24) → 17-22 (18-23) |
+| Enemy | Changes | Reason |
+|---|---|---|
+| Bowlbugs | Reduce Headbutt/Bite damage, adjust Egg block | Reduce damage spikes |
+| Exoskeletons | HP 24–28(25–29) → 24–26(25–27) | Reduce HP variance |
+| Thieving Hopper | Reduce all damage values | Reduce multi-action pressure |
+| Tunneler | Reduce Bite, increase Below damage | Redistribute identity |
+| Chompers | HP reduced | Slight reduction |
+| Hunter Killer | Reduce HP and all attacks | Overall overpowered reduction |
+| Mytes | Bite 13(15) → 12(14) | Slight reduction |
+| Ovicopter | Reduce Hatchling HP, increase Egg identity | Focus on egg mechanic |
+| Slumbering Beetle | Reduce plating and HP | Reduce early breakpoint |
+| Spiny Toad | Tongue Lash 17(19) → 15(17) | Slight reduction |
+| The Obscura | Reduce Parafright HP and damage | Reduce minion power |
+| Decimillipede | Reduce HP and damage | Multiple overpowered aspects |
+| Entomancer | Reduce HP/damage, Hive goes discard instead of draw | Reduce pressure |
+| Infested Prism | Pulsate 8(10) → 6(7) | Reduce multi-action damage |
+| Kaiser Crab | Redistribute damage values | Improve identity |
+| Knowledge Demon | Reduce opening damage, increase scaling | More growth focused |
+| The Insatiable | Bite 28(31) → 26(29) | Slight reduction |
 
-### Custom Powers
+---
 
-| Power | Description |
-|-------|-------------|
-| **RedSkullPower** | When HP ≤ 50%, deal 30% increased damage (used by Red Skull relic) |
-| **SwordOfJadePower** | Your Dexterity also increases attack damage (used by Sword of Jade relic) |
-| **Personal Hive** | Dazed cards go to Discard pile instead of Draw pile |
+## Act 3 - Glory
 
-### Relic Adjustments
+| Enemy | Changes | Reason |
+|---|---|---|
+| Scrolls of Biting | Chomp 14(16) → 13(15) | Slight reduction |
+| Turret Operator | Redistribute HP between operator and shield | Improve identity |
+| Axebots | Hammer Uppercut 12(14) → 9(11) | Reduce damage |
+| Construct Menagerie | Reduce Punch damage and Cubex scaling | Reduce burst |
+| Fabricator | Reduce attack damage and all bot HP | Minions too strong |
+| Frog Knight | Reduce Tongue Lash/Strike Down damage | Reduce multi-action damage |
+| Globe Head | Redistribute damage between attacks | Improve identity |
+| Owl Magistrate | HP reduced | Slight reduction |
+| Slimed Berserker | HP reduced | Slight reduction |
+| The Lost and Forgotten | Balance HP between phases, remove Miasma block, reduce Dread damage | Make phases consistent |
+| Knights | Reduce damage and HP | Slight reduction |
+| Mecha Knight | Charge 25(30) → 20(25) | Reduce burst |
+| Soul Nexus | Reduce HP and Drain Life | Reduce multi-action pressure |
+| Aeonglass | Adjust Ebb damage/block and scaling | Improve consistency |
+| Queen | Reduce Torch Head damage | Reduce downtime punishment |
+| Test Subject | Adjust HP and reduce attacks | Reduce burst |
 
-| Relic | Change |
-|-------|--------|
-| **Red Skull** | Reworked: grants +30% damage when HP ≤ 50% (via RedSkullPower) |
-| **Sword of Jade** | Reworked: gain 1 Str + 1 Dex per combat, Dexterity also adds to attack damage (via SwordOfJadePower) |
-| **Bag of Preparation** | Turn 1: full bonus, Turn 2: +1 card only, beyond: no bonus |
-| **Meat on the Bone** | Heals 3 if HP between threshold and 70% |
-| **Bowler Hat** | Now also grants 16 gold on pickup |
-| **Amethyst Aubergine** | Now grants gold on pickup |
-| **Book of Five Rings** | Heal reduced 20 → 5, also grants Max HP on trigger |
-| **Centennial Puzzle** | After trigger, gain 3 Block Next Turn |
-| **Galactic Dust** | 7 stars → 7 block |
-| **Intimidating Helmet** | Grants 2× energy as block for cards costing 2+ energy |
-| **Old Coin** | Gold reduced to 333 |
-| **Permafrost** | Gain 10 block at start of combat |
-| **War Paint** | Upgrades 2 skills (prefers non-Basic for 2nd) |
-| **Whetstone** | Upgrades 2 attacks (prefers non-Basic for 2nd) |
+---
 
-### Event Adjustments
+# Relic Changes
 
-| Event | Change |
-|-------|--------|
-| **Battleworn Dummy** | HP set to 250 |
-| **Hungry for Mushrooms** | Big Mushroom: heals 20% max HP on pickup. Fragrant Mushroom: lose 12 HP |
-| **Luminous Choir** | Gold reward: 129 |
-| **Room Full of Cheese** | Damage scales: 8 (Act 1+) / 14 (otherwise) |
-| **Slippery Bridge** | HP loss starts at 2, first card removal no longer excludes Basic cards |
-| **The Lantern Key** | Mysterious Knight minions: 6 → 4 |
-| **Trial — Merchant Innocent** | 1 Shame curse, upgrade 3 cards |
-| **Zen Weaver** | Breathing: 50g, Emotional: 125g, Arachnid: 230g |
+| Relic | Changes |
+|---|---|
+| Amethyst Aubergine | Enemies drop +15 Gold, grants immediately |
+| Bag of Preparation | Draw +2 cards at combat start |
+| Book of Five Rings | Reworked: Heal + increase max HP when adding cards |
+| Centennial Puzzle | Draw 3 cards and gain Block after first HP loss |
+| War Paint | Upgrade 2 Skills, prioritize non-starter cards |
+| Whetstone | Upgrade 2 Attacks, prioritize non-starter cards |
+| Red Skull | Reworked into Strength/damage bonus below 50% HP |
+| Bowler Hat | Gold bonus granted immediately |
+| Permafrost | First Power gives 10 Block |
+| Galactic Dust | Spending 7 Gold gives 7 Block |
+| Intimidating Helmet | Energy-cost cards grant Block |
+| Meat on the Bone | Higher HP threshold healing |
+| Old Coin | Gain 333 Gold |
+| Sword of Jade | Reworked into Strength/Dexterity scaling |
 
-> Values in parentheses are Ascension levels (Deadly Enemies / Tough Enemies).
+---
+
+# Event Changes
+
+| Event | Changes |
+|---|---|
+| Luminous Choir | Tribute cost reduced |
+| The Lantern Key | Mysterious Knight starts with less Strength/Plating |
+| Zen Weaver | Gold cost reduced |
+| Battleworn Dummy | Setting 3 HP reduced 300 → 250 |
+| Hungry for Mushrooms | Adjusted healing and HP loss |
+| The Trial | Upgrade 2 → 3 cards |
+| Room Full of Cheese | HP loss adjusted by Act |
+| Slippery Bridge | Basic cards excluded from first removal, Hold On starts at 2 HP loss |
+
 
 ## Requirements
 
