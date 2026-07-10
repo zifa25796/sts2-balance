@@ -12,6 +12,12 @@ A Slay the Spire 2 balance modification mod that adjusts enemy stats for a more 
 | Act 2 | 1.1x |
 | Act 3 | 1.2x |
 
+### Mechanics
+
+| Mechanic | Change |
+|----------|--------|
+| **Quest Cards** | Whenever you draw a Quest card, Exhaust it and draw a card |
+
 ### Monster Adjustments — Act 1
 
 | Monster | Change |
@@ -82,7 +88,7 @@ A Slay the Spire 2 balance modification mod that adjusts enemy stats for a more 
 | **Aeonglass** | Ebb damage/block: 30(35) → 25(30) |
 | **Axebot** | Hammer Uppercut: 11(13) → 9(11) |
 | **Fabricator** | Fabricating Strike: 16(18) → 13(16) |
-| **Flail Knight** | HP: 9 → 8 |
+| **Flail Knight** | Flail damage: 9(10) → 8(9) |
 | **Frog Knight** | Tongue Lash: 10(11) → 9(10), Strike Down Evil: 22(24) → 20(22) |
 | **Globe Head** | Shocking Slap: 11(12) → 10(11), Galvanic Burst: 15(17) → 14(15), Thunder Strike: 8(9) → 7(8) |
 | **Guardbot** | HP: 19-20 (20-21) → 15-19 (16-20) |
@@ -103,18 +109,20 @@ A Slay the Spire 2 balance modification mod that adjusts enemy stats for a more 
 | **Turret Operator** | HP: 45 → 35 |
 | **Zapbot** | HP: 22-23 (23-24) → 17-22 (18-23) |
 
-### Power Adjustments
+### Custom Powers
 
-| Power | Change |
-|-------|--------|
+| Power | Description |
+|-------|-------------|
+| **RedSkullPower** | When HP ≤ 50%, deal 30% increased damage (used by Red Skull relic) |
+| **SwordOfJadePower** | Your Dexterity also increases attack damage (used by Sword of Jade relic) |
 | **Personal Hive** | Dazed cards go to Discard pile instead of Draw pile |
 
 ### Relic Adjustments
 
 | Relic | Change |
 |-------|--------|
-| **Red Skull** | Reworked: grants +30% damage when HP ≤ 50% (custom power) |
-| **Sword of Jade** | Reworked: gain 1 Str + 1 Dex per combat, Dexterity also adds to attack damage |
+| **Red Skull** | Reworked: grants +30% damage when HP ≤ 50% (via RedSkullPower) |
+| **Sword of Jade** | Reworked: gain 1 Str + 1 Dex per combat, Dexterity also adds to attack damage (via SwordOfJadePower) |
 | **Bag of Preparation** | Turn 1: full bonus, Turn 2: +1 card only, beyond: no bonus |
 | **Meat on the Bone** | Heals 3 if HP between threshold and 70% |
 | **Bowler Hat** | Now also grants 16 gold on pickup |
@@ -133,21 +141,13 @@ A Slay the Spire 2 balance modification mod that adjusts enemy stats for a more 
 | Event | Change |
 |-------|--------|
 | **Battleworn Dummy** | HP set to 250 |
+| **Hungry for Mushrooms** | Big Mushroom: heals 20% max HP on pickup. Fragrant Mushroom: lose 12 HP |
 | **Luminous Choir** | Gold reward: 129 |
 | **Room Full of Cheese** | Damage scales: 8 (Act 1+) / 14 (otherwise) |
 | **Slippery Bridge** | HP loss starts at 2, first card removal no longer excludes Basic cards |
 | **The Lantern Key** | Mysterious Knight minions: 6 → 4 |
 | **Trial — Merchant Innocent** | 1 Shame curse, upgrade 3 cards |
 | **Zen Weaver** | Breathing: 50g, Emotional: 125g, Arachnid: 230g |
-
-### System Changes
-
-| Change | Description |
-|--------|-------------|
-| **Quest Cards** | Auto-exhaust on draw and replace from deck |
-| **Big Mushroom** | Heals 20% max HP on pickup |
-| **Fragrant Mushroom** | HP loss: 12 |
-| **Flail Knight** | Changed from HP nerf to damage nerf (FlailDamage: 9(8)) |
 
 > Values in parentheses are Ascension levels (Deadly Enemies / Tough Enemies).
 
