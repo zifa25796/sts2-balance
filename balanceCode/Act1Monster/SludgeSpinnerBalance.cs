@@ -39,7 +39,7 @@ public class SludgeSpinnerBalance
         static async Task RunRageMove(SludgeSpinner monster, IReadOnlyList<Creature> targets)
         {
             AttackCommand attackCommand = await DamageCmd.Attack((Decimal) GetRageDamage(monster)).FromMonster((MonsterModel) monster).WithAttackerAnim("Attack", 0.5f).WithAttackerFx(sfx: "event:/sfx/enemy/enemy_attacks/sludge_spinner/sludge_spinner_attack_dash").WithHitFx("vfx/vfx_attack_blunt").Execute((PlayerChoiceContext) null);
-            StrengthPower strengthPower = await PowerCmd.Apply<StrengthPower>((PlayerChoiceContext) new ThrowingPlayerChoiceContext(), monster.Creature, 3M, monster.Creature, (CardModel) null);
+            StrengthPower strengthPower = await PowerCmd.Apply<StrengthPower>((PlayerChoiceContext) new ThrowingPlayerChoiceContext(), monster.Creature, 2M, monster.Creature, (CardModel) null);
         }
     }
 }

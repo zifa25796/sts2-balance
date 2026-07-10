@@ -39,7 +39,7 @@ A Slay the Spire 2 balance modification mod that adjusts enemy stats for a more 
 | **Sewer Clam** | Jet damage: 7(8) → 6(7), Pressurize grants 6 Strength |
 | **Skulking Colony** | Inertia Strength gain: 3(4) → 2(3), Piercing Stabs: 7(8) → 6(7) |
 | **Slithering Strangler** | Thwack: 6(7) → 5(6), Lash: 11(12) → 10(11), Thwack blocks 4 |
-| **Sludge Spinner** | Rage grants 3 Strength |
+| **Sludge Spinner** | Rage grants 2 Strength |
 | **Soul Fysh** | HP: 216 (216) → 206 (216), Scream: 13(15) → 11(13), Gaze: 6(7) → 5(6) |
 | **Terror Eel** | Crash: 17(19) → 15(17) |
 | **Toadpole** | HP: 20-24 (20-24) → 19-23, Whirl: 7(8) → 6(7) |
@@ -58,7 +58,7 @@ A Slay the Spire 2 balance modification mod that adjusts enemy stats for a more 
 | **Decimillipede Segment** | HP: 44-48 (48-52) → 38-44 (42-48), Constrict: 7(8) → 6(7), Bulk: 6(7) → 5(6) |
 | **Entomancer** | HP: 152 (152) → 142 (152), Spear: 18(20) → 16(18) |
 | **Exoskeleton** | HP: 26-27 → 24-27 |
-| **Hunter Killer** | HP: 115-116 → 111, Bite: 16(18) → 14(16), Puncture: 7(8) → 6(7) |
+| **Hunter Killer** | HP: 111-121 (116-126) → 111 (116), Bite: 16(18) → 14(16), Puncture: 7(8) → 6(7) |
 | **Infested Prism** | Pulsate: 7(8) → 6(7) |
 | **Knowledge Demon** | HP: 389 → 369 (389), Slap: 16(18) → 15(16), Knowledge Overwhelming: 8(9) → 7(8), Ponder: 6(7) → 5(6), Ponder Strength: 4(5) → 3(4) |
 | **Myte** | Bite: 14(16) → 12(14) |
@@ -153,7 +153,7 @@ A Slay the Spire 2 balance modification mod that adjusts enemy stats for a more 
 
 ## Requirements
 
-- Slay the Spire 2 (v0.107.0+)
+- Slay the Spire 2 (v0.108.0+)
 - [BaseLib](https://github.com/STS2Modding/BaseLib) v3.3.2+
 
 ## Installation

@@ -22,7 +22,7 @@ public class HunterKillerBalance
     {
         static bool Prefix(ref int __result)
         {
-            __result = AscensionHelper.HasAscension(AscensionLevel.ToughEnemies) ? 115 : 111;
+            __result = AscensionHelper.HasAscension(AscensionLevel.ToughEnemies) ? 116 : 111;
             return false;
         }
     }
